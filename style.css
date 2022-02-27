@@ -1,0 +1,119 @@
+
+body, html{
+    margin: 0;
+    font: 16px "Lato", sans-serif;
+    color: #777;
+    height: 100%; /*obs1*/
+    /* border: 1px solid red; */
+}
+
+.conteudo{
+    color: #777;
+    background-color: white;
+    text-align: justify;
+    padding: 50px 80px;
+}
+
+h3{
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+
+/* Efeito Parallax
+---------------------------------*/
+.caixa1, .caixa2, .caixa3, .caixa4{
+    /* border: 1px solid red; */
+    height: 100%; /*obs1*/
+    opacity: 0.8; /*obs2*/
+    /* background-repeat: no-repeat; *//*nao funcionou para todos, tive que colocar para cada caixa*/
+    
+    
+
+}
+.caixa1{
+    background: url(/imagens/imagem1.jpg) no-repeat; /*obs3*/
+    background-size: cover; /*obs4*/
+    background-position: center; /*obs5*/
+    background-attachment: fixed;/*obs6*/
+    position: relative;
+
+}
+.caixa2{
+    background: url(/imagens/imagem2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.caixa3{
+    background: url(/imagens/imagem3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.caixa4{
+    background: url(/imagens/imagem4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.conteudo-titulo{
+    position: absolute;
+    left: 0;/*obs7*/
+    top: 45%;/*obs8*/
+    width: 100%;
+    /* background: red; */
+    text-align: center; /*obs10*/
+   
+    
+}
+
+.conteudo-titulo span.titulo{
+    background: #111;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;/*obs9*/
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+/*obs1: 
+essencial para o efeito, ter 100% do body, ou da tela mostrada no navegador, para que se possa ter o efeito da imagem com o parallax.*/
+
+/*obs2: 
+o efeito de transparencia da imagem. Vai de 0 a 1. 0 eh totalmente transparente enquanto 1 eh totalmente aparente.*/
+
+/*obs3: 
+no-repeat, foi colocado, pq dependendo do tamanho do dispostivo, a imagem fique pequena e ela acabe repetindo, entao cortamos o efeito de repeticao que vem por padrao.*/
+
+/* obs4: 
+Faz com que a imagem ou background cubra toda a area dela, extende o tamanho da imagem para o tamanho que deve caber. Para isso importante ter imagem grande, para que nao venha a ficar uma imagem distorcida depois. */
+
+/*obs5:
+Alem do cover, que poe a imagem para cobrir todo o espacamento do background, importante usar o center, para que a imagem fique centralizada, pois ao cobrir todo  espaco ela nao necessariamente vai ficar centralizada.*/
+
+/*obs6:
+Agora sim  o efeito da parallax, da imagem nao mexer, mas ao rolar a pagina, parecer um efeito da imagem esta sobrepondo a outra.*/
+
+/*obs7: 
+Apartir da borda esquerda da pagina e esquerda do elemento, se o elemento for grande horizontalmente, nao necessariamente estara alinhado, pois a base nao eh seu centro, mas a sua esquerda, So funciona com position absolute.*/
+
+/*obs8:
+O mesmo ocorrido da obs7, so que pelo topo.
+*/
+
+/*obs9:
+Espacamento entre as letras*/
+
+/*obs10
+Centralizou o conteudo, nao foi muito a solicao que eu concordei mas funcionou*/
